@@ -21,9 +21,9 @@ function Recipe () {
     const displayRecipeNames = () => {
         return recipeNames.map((name, index) => {
             return (
-                <li>
+                <div role="listitem">
                     {name}
-                </li>
+                </div>
             )
         })
     } 
@@ -32,10 +32,12 @@ function Recipe () {
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    hideMyRecipe && recipeNames && 
-                    <ul>
-                       {displayRecipeNames()}
-                    </ul>    
+                    hideMyRecipe && recipeNames && (
+                        <div role="list">
+                            {displayRecipeNames()}
+                        </div>
+                    )
+
                 }
                 {
                     hideMyRecipe && (
