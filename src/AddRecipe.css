@@ -1,0 +1,11 @@
+label {
+    margin-right: 10px;
+}
+
+input[type='text']:first-of-type {
+    margin-right: 10px;
+}
+
+.submitRecipeButton {
+    margin-top: 25px;
+}
