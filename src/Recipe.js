@@ -4,7 +4,7 @@ import AddRecipe from './AddRecipe';
 function Recipe () {
     const [addRecipe, setAddRecipe] = useState(false);
     const [hideMyRecipe, setHideMyRecipe] = useState(true);
-    const [recipeNames, setRecipeNames] = useState([]);
+    const [recipeName, setRecipeNames] = useState('');
 
     const onAddRecipeClicked = () => {
         setAddRecipe(true);
@@ -12,20 +12,18 @@ function Recipe () {
     }
 
     const onSubmit = (recipeName) => {
-        setRecipeNames(arr => [...arr, recipeName]);
+        setRecipeNames(recipeName);
         setHideMyRecipe(true);
         setAddRecipe(false);
 
     }
 
     const displayRecipeNames = () => {
-        return recipeNames.map( (name, index ) => {
-            return (
-                <li key={index}>
-                    <textbox role="textbox" name="Recipe name">{name}</textbox>
-                </li>
-            )
-        })
+        return (
+            <li>
+                <p role="textbox" name="Recipe name">{recipeName}</p>
+            </li>
+        )
     } 
         
     return (
@@ -36,14 +34,12 @@ function Recipe () {
                     <div>
                         
                         {
-                            recipeNames.length === 0 && (
-                            <div>
+                            recipeName.length === 0 && (<div>
                                 <p>There are no recipes to list</p>
-                            </div>
-                            )
+                            </div>)
                         }
                         {
-                            recipeNames && 
+                            recipeName && 
                             <ul>
                                 {displayRecipeNames()}
                             </ul>
