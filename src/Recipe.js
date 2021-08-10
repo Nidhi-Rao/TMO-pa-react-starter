@@ -50,7 +50,7 @@ function Recipe () {
                         }
                         
                         <div>
-                            <button role="button" onClick={() => onAddRecipeClicked()}>Add recipe</button>
+                            <button role="button" onClick={() => onAddRecipeClicked()}>Add Recipe</button>
                         </div>
                     </div>
                     )

@@ -11,7 +11,7 @@ function AddRecipe({onSubmit}){
     return(
         
         <form>
-            <label>Recipe Name</label>
+            <label>Recipe name</label>
             <input role="textbox" label="Recipe name" type="text" name="Recipe name" onChange = {(e) => onAddRecipeName(e)}></input>
             <label>Recipe Instructions</label>
             <input role="textbox" label="instructions" type="text" name="instructions"></input>
