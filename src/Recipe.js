@@ -44,9 +44,9 @@ function Recipe () {
                         }
                         {
                             recipeNames && 
-                            <ul>
+                            <ol>
                                 {displayRecipeNames()}
-                            </ul>
+                            </ol>
                         }
                         
                         <div>

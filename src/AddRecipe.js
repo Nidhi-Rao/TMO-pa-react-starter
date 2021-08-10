@@ -10,7 +10,7 @@ function AddRecipe({onSubmit}){
 
     return(
         
-        <form name="AddRecipeForm">
+        <form name="Add Recipe">
             <label>Recipe Name</label>
             <input role="textbox" aria-label="Recipe name" type="text" onChange = {(e) => onAddRecipeName(e)}></input>
             <label>Recipe Instructions</label>
