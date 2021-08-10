@@ -12,9 +12,9 @@ function AddRecipe({onSubmit}){
         
         <form name="AddRecipeForm">
             <label>Recipe Name</label>
-            <input role="textbox" label="Recipe name" type="text" name="Recipe name"></input>
+            <input role="textbox" aria-label="Recipe name" type="text" onChange = {(e) => onAddRecipeName(e)}></input>
             <label>Recipe Instructions</label>
-            <input role="textbox" label="instructions" type="text" name="instructions"></input>
+            <input role="textbox" label="instructions" type="text"></input>
             <div className="submitRecipeButton">
                 <button onClick = {() => onSubmit(recipeName)}>Submit</button>        
             </div>
