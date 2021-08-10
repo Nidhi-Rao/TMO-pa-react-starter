@@ -21,8 +21,8 @@ function Recipe () {
     const displayRecipeNames = () => {
         return recipeNames.map( (name, index ) => {
             return (
-                <li key={index}>
-                    <p role="textbox" name="Recipe name">{name}</p>
+                <li role="listitem" key={index}>
+                    <p name="Recipe name">{name}</p>
                 </li>
             )
         })
