@@ -22,13 +22,13 @@ function Recipe () {
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    hideMyRecipe && recipeName && (
+                    hideMyRecipe && recipeName && 
                         <ul>
                             <li>
                                 {recipeName}
                             </li>
                         </ul>
-                    )
+                    
                 }
                 {
                     hideMyRecipe && (
