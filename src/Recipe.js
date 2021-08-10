@@ -22,7 +22,7 @@ function Recipe () {
         return recipeNames.map( (name, index ) => {
             return (
                 <li key={index}>
-                    <p role="textbox" name="Recipe name">{name}</p>
+                    <textbox role="textbox" name="Recipe name">{name}</textbox>
                 </li>
             )
         })
