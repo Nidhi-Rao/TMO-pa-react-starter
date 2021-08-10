@@ -12,7 +12,7 @@ function AddRecipe({onSubmit}){
         <>
         <form>
             <label>Recipe Name</label>
-            <input role="textbox" label = "Recipe name" type="text" name="Recipe name" onBlur = {(e) => onAddRecipeName(e)}/>
+            <input role="textbox" label = "Recipe name" type="text" name="Recipe name" onChange = {(e) => onAddRecipeName(e)}/>
             <label>Recipe Instructions</label>
             <input role="textbox" label = "Recipe Instructions" type="text" name="instructions"/>
             <div className="submitRecipeButton">
