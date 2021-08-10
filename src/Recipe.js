@@ -21,7 +21,7 @@ function Recipe () {
     const displayRecipeNames = () => {
         return recipeNames.map((name, index) => {
             return (
-                <li role="listitem" key={index}>
+                <li role="listitem" aria-label="listitem" key={index}>
                     <p>{name}</p>
                 </li>
             )
@@ -44,7 +44,7 @@ function Recipe () {
                         }
                         {
                             recipeNames && 
-                            <ul role="list">
+                            <ul role="list" aria-label="list">
                                 {displayRecipeNames()}
                             </ul>
                         }
