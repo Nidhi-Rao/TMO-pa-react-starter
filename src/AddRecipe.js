@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './AddRecipe.css';
 
 function AddRecipe({onSubmit}){
     const [recipeName, setRecipeName] = useState("");
@@ -9,15 +10,15 @@ function AddRecipe({onSubmit}){
 
     return(
         <>
-        <div>
+        <form>
             <label>Recipe Name</label>
-            <input type = "text" onBlur = {(e) => onAddRecipeName(e)}/>
+            <input role="textbox" type = "text" name="Recipe name" onBlur = {(e) => onAddRecipeName(e)}/>
             <label>Recipe Instructions</label>
-            <input type = "text"/>
+            <input role="textbox" type = "text" name="instructions"/>
             <div className="submitRecipeButton">
                 <button onClick = {() => onSubmit(recipeName)}>Submit</button>        
             </div>
-        </div>
+        </form>
         </>
     )
 }

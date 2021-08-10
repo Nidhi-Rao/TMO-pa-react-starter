@@ -30,7 +30,7 @@ function Recipe () {
         
     return (
         <>
-            <h1>My Recipes</h1>
+            <h1 role="heading">My Recipes</h1>
                 {
                     hideMyRecipe && (
                     <div>
@@ -38,7 +38,7 @@ function Recipe () {
                         {
                             recipeNames.length === 0 && (
                             <div>
-                                <p>There are no recipes to list.</p>
+                                <p>There are no recipes to list</p>
                             </div>
                             )
                         }
@@ -50,7 +50,7 @@ function Recipe () {
                         }
                         
                         <div>
-                            <button onClick={() => onAddRecipeClicked()}>Add recipe</button>
+                            <button role="button" onClick={() => onAddRecipeClicked()}>Add recipe</button>
                         </div>
                     </div>
                     )
