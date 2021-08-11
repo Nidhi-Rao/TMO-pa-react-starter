@@ -21,10 +21,8 @@ function Recipe () {
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    recipeNames && hideMyRecipe && 
-                    <div role="listitem">
-                        {recipeNames}
-                    </div>
+                    recipeNames !== '' && hideMyRecipe && 
+                        <div role="listitem">{recipeNames}</div>
                 }
                 {
                     hideMyRecipe && (
