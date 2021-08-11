@@ -22,9 +22,9 @@ function Recipe () {
     const displayRecipeNames = () => {
         return recipeNames.map((name, index) => {
             return (
-                <div role="listitem">
-                    {name}
-                </div>
+                <ul>
+                    <li>{name}</li>
+                </ul>
             )
         })
     } 
