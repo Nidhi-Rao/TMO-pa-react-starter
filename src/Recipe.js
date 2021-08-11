@@ -15,7 +15,6 @@ function Recipe () {
         setRecipeNames(recipeName);
         setHideMyRecipe(true);
         setAddRecipe(false);
-
     }
         
     return (
@@ -23,9 +22,9 @@ function Recipe () {
             <h1 role="heading">My Recipes</h1>
                 {
                     recipeNames && hideMyRecipe && 
-                    <ul>
-                        <li>{recipeNames}</li>
-                    </ul>
+                    <div role="list">
+                        {recipeNames}
+                    </div>
                 }
                 {
                     hideMyRecipe && (
