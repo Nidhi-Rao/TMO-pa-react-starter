@@ -12,29 +12,47 @@ function Recipe () {
     }
 
     const onSubmit = (recipeName) => {
+        //setRecipeNames(arr => [...arr, recipeName]);
         setRecipeNames(recipeName);
         setHideMyRecipe(true);
         setAddRecipe(false);
+
     }
+
+    const displayRecipeNames = () => {
+        return recipeNames.map((name, index) => {
+            return (
+                <div role="listitem">
+                    {name}
+                </div>
+            )
+        })
+    } 
         
     return (
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    recipeNames !== '' && hideMyRecipe && 
-                        <div role="listitem">{recipeNames}</div>
+                    recipeNames && 
+                    
+                        <div role="listitem">
+                            {recipeNames}
+                        </div>
+                            
                 }
                 {
                     hideMyRecipe && (
                     <div>
                         
                         {
-                            recipeNames.length === 0 && 
+                            recipeNames.length === 0 && (
                             <div>
                                 <p>There are no recipes to list</p>
                             </div>
+                            )
                         }
-                    
+                        
+                        
                         <div>
                             <button role="button" onClick={() => onAddRecipeClicked()}>Add Recipe</button>
                         </div>
