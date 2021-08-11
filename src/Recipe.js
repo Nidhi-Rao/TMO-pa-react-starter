@@ -22,7 +22,7 @@ function Recipe () {
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    hideMyRecipe && recipeNames && 
+                    recipeNames && 
                     
                         <div role="listitem">
                             {recipeNames}
