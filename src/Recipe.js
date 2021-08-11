@@ -22,10 +22,10 @@ function Recipe () {
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    recipeNames.length && hideMyRecipe && 
-                    <div role="listitem">
-                            {recipeNames}
-                    </div>
+                    recipeNames && hideMyRecipe && 
+                    <ul>
+                        <li>{recipeNames}</li>
+                    </ul>
                 }
                 {
                     hideMyRecipe && (
