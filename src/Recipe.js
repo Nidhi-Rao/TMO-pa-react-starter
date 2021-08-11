@@ -12,28 +12,17 @@ function Recipe () {
     }
 
     const onSubmit = (recipeName) => {
-        //setRecipeNames(arr => [...arr, recipeName]);
         setRecipeNames(recipeName);
         setHideMyRecipe(true);
         setAddRecipe(false);
 
     }
-
-    const displayRecipeNames = () => {
-        return recipeNames.map((name, index) => {
-            return (
-                <div role="listitem">
-                    {name}
-                </div>
-            )
-        })
-    } 
         
     return (
         <>
             <h1 role="heading">My Recipes</h1>
                 {
-                    recipeNames && 
+                    hideMyRecipe && recipeNames && 
                     
                         <div role="listitem">
                             {recipeNames}
